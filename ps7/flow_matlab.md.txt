@@ -1,0 +1,26 @@
+Desired position
+      ↓
+Position Controller
+      ↓
+Desired velocity
+      ↓
+Velocity Controller
+      ↓
+Desired attitude
+      ↓
+Attitude Controller
+      ↓
+Desired angular rate
+      ↓
+Rate Controller
+      ↓
+Desired thrust + roll/pitch/yaw torque
+      ↓
+Mixer
+      ↓
+Motor 1, 2, 3, 4
+      ↓
+Quadcopter model
+      ↓
+Sensors / feedback
+      └──────────────────→ controllers
