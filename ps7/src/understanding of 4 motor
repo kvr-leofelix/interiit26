@@ -1,0 +1,51 @@
+for upward motion
+M1 ↑
+M2 ↑
+M3 ↑
+M4 ↑
+-----------------
+for left roll
+Left motors       Right motors
+M1 ↓                 M2 ↑
+M4 ↓                 M3 ↑
+-----------------
+for pitch
+Front:
+M1 ↓    M2 ↓
+
+       DRONE
+
+M4 ↑    M3 ↑
+Rear:
+The rear rises relative to the front, producing pitch.
+------------------
+For YAW, something slightly different happens. A spinning rotor also tries to twist the drone in the opposite direction. That's why neighboring motors rotate in opposite directions.
+So increasing one diagonal pair relative to the other creates yaw:
+M1 and M3 ↑
+M2 and M4 ↓
+---------
+diagonal distance arm length=0.23m(center to motar distance)
+so the it make a sqauare 
+d = 0.23 / sqrt(2)
+  ≈ 0.1626 m
+  d is motor distance from each body axis
+----------
+For roll and pitch, we can calculate torque using:
+torque = force × distance
+
+But for yaw, rotor thrust alone isn't enough. We need to know how much reaction torque a rotor creates.
+Yaw torque = yaw coefficient × rotor thrust
+yaw coef NOT provide this coefficient.
+either take yaw coef as any random number or take normalization herr
+-----------
+[T, roll torque, pitch torque, yaw torque]
+into
+[M1 thrust, M2 thrust, M3 thrust, M4 thrust]
+-------------
+for total thrust
+T = F1 + F2 + F3 + F4
+----------
+for yaw
+kYaw = yaw torque produced per unit rotor thrust
+kYaw unit is meter
+

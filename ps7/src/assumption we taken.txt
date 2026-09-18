@@ -1,0 +1,37 @@
++x = forward
++y = left
++z = upward
+ROLL  = rotation around X axis
+PITCH = rotation around Y axis
+YAW   = rotation around Z axis
+-----------
+ROLL  = rotation around X axis
+PITCH = rotation around Y axis
+YAW   = rotation around Z axis
+---------------
+
+                    FRONT
+                     +X
+                      ↑
+
+             M1 (ccw)         M2 (cw)
+          Front-left       Front-right
+               \             /
+                \           /
+                 \         /
+                  \       /
+                   [DRONE]
+                  /       \
+                 /         \
+                /           \
+               /             \
+             M4 (cw)          M3 (ccw)
+          Rear-left        Rear-right
+
+
+                 +Y ←
+-----------------------------------
+M1 = Front Left (ccw)
+M2 = Front Right(cw)
+M3 = Rear Right(ccw)
+M4 = Rear Left(cw)

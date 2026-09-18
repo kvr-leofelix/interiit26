@@ -1,0 +1,25 @@
+Task B asks us to:
+
+Build the rotational model of the quadcopter.
+Control roll, pitch and yaw rotation rates.
+Tune the controllers.
+Produce step-response plots.
+Report gains.
+------------------
+flow:
+Desired rotation rate
+        ↓
+   Rate controller
+        ↓
+      Torque
+        ↓
+ Quadcopter dynamics
+        ↓
+Actual rotation rate
+        │
+        └──────── feedback
+------------------
+here we don't control how fast its going but how quickly the drone rotate
+p = roll rate  [rad/s]
+q = pitch rate [rad/s]
+r = yaw rate   [rad/s]
