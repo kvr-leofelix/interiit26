@@ -207,17 +207,44 @@ legend( ...
     'Kp=0.14', ...
     'Location','best');
 
+%% Save results safely
+
+scriptPath = mfilename('fullpath');
+simulationFolder = fileparts(scriptPath);
+projectRoot = fileparts(simulationFolder);
+
+resultsFolder = fullfile(projectRoot, 'results');
+plotFolder = fullfile(resultsFolder, 'plots');
+
+if ~exist(resultsFolder, 'dir')
+    mkdir(resultsFolder);
+end
+
+if ~exist(plotFolder, 'dir')
+    mkdir(plotFolder);
+end
+
 %% Save plot
 
-saveFile = fullfile( ...
+plotFile = fullfile( ...
     plotFolder, ...
     'task_B_roll_Kp_finetune.png');
 
 exportgraphics( ...
     gcf, ...
-    saveFile, ...
+    plotFile, ...
     'Resolution',300);
 
+%% Save table
+
+csvFile = fullfile( ...
+    resultsFolder, ...
+    'task_B_roll_Kp_finetune.csv');
+
+writetable(results, csvFile);
+
+fprintf('\nPlot saved to:\n%s\n', plotFile);
+fprintf('\nTable saved to:\n%s\n', csvFile);
 %% Save numbers
 
 resultsFolder = fullfile(projectRoot,'results');
