@@ -23,3 +23,7 @@ Rise time: time to go from 10% to 90% of the target. Smaller = faster.
 Overshoot: how far above the target it goes, as a percentage. Smaller is usually better.
 Settling time: when it enters ±2% of the target and stays there. Smaller = settles faster.
 Steady-state error: final target minus actual value. Closer to zero = better.
+-----------------------
+Larger P has almost exactly zero final error despite having no integral term. That's not a mistake. In this ideal angular-rate model, maintaining a constant rate requires essentially zero torque once the desired rate is reached because we haven't modeled rotational damping or an external disturbance. Therefore a P controller doesn't require a persistent error to maintain the rate.
+
+If we added a constant disturbing torque, that would change: P-only would need some remaining error to generate opposing torque, while integral control could remove it.
