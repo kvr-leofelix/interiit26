@@ -1,0 +1,25 @@
+Small P should generally react more slowly. P looks at the current error
+big error → bigger torque
+small error → smaller torque
+ex :Small P:
+error × 0.025
+Larger P:
+error × 0.070
+-----------------------
+P + small I adds memory. I keeps adding past error:
+P + small I adds memory. I keeps adding past error:
+P + large I deliberately makes integral action much stronger. Watch for overshoot-->not good
+------------------------
+P → How wrong am I now?
+I → How long have I been wrong?
+D → How quickly is the error changing?
+---------
+D can act like damping/braking, although our ideal simulation can make derivative behaviour look somewhat artificial (NOTES FROM LLM)
+------------
+With this simplified plant and no drag/load disturbance, even a P-only controller can eventually reach the target.
+I is always required for zero steady-state error.It is always not true; it depends on the plant and disturbances.
+--------------------
+Rise time: time to go from 10% to 90% of the target. Smaller = faster.
+Overshoot: how far above the target it goes, as a percentage. Smaller is usually better.
+Settling time: when it enters ±2% of the target and stays there. Smaller = settles faster.
+Steady-state error: final target minus actual value. Closer to zero = better.

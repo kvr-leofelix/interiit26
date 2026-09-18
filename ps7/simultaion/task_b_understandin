@@ -23,3 +23,11 @@ here we don't control how fast its going but how quickly the drone rotate
 p = roll rate  [rad/s]
 q = pitch rate [rad/s]
 r = yaw rate   [rad/s]
+---------------
+inertial value is already given
+Ixx = 0.011 kg m²
+Iyy = 0.011 kg m²
+Izz = 0.021 kg m²
+note:Smaller inertia means easier to rotate.
+------------
+The cross(...) term accounts for interaction between rotations
