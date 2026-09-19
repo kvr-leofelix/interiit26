@@ -16,7 +16,7 @@ back emf more if it spin faster.to becuse to oppose the applied voltage
 τ = K(V - Keω)/R
 Kew is back emf and V is supplied voltage
 k=torque contant
-At nearly zero load, speed approaches the no-load speed and current becomes relatively small.TODO:
+At nearly zero load, speed approaches the no-load speed and current becomes relatively small.
 at w=0 the current is ideally V/R so very big
 Stall: maximum torque, maximum current, zero speed
 No load: maximum speed, low torque/current
@@ -37,8 +37,10 @@ mcu to esc communicate with =pwm , can,uart,analog or torque and current command
 moves in steps.like T660 moves 200 step per rev and with the stepper driver using the dip we can change it with power of 2**n)*200 this is microstepping
 
 communication -->mcu-->driver [step pulses (steps move)/dir logic level(direction)]
-Without feedback, the controller cannot directly know that happened.why stepper lose steps: Excessive load torque
-Excessive acceleration:TODO:
+Without feedback, the controller cannot directly know that happened.
+
+why stepper lose steps: Excessive load torque
+Excessive acceleration:
 High speed
 Insufficient phase current
 Supply-voltage limitations at high speed

@@ -1,0 +1,25 @@
+Drive wheels for the rover in section 4, holding a commanded speed on flat ground
+Sol:BLDC +FOC
+
+Bldc with foc or trapezoidal commutation ESC with a closed-loop speed controller
+Simple motor work but bldc is for heavy density work ,good efficency
+A stepper would overheat at continuous drive speeds, lose torque at higher RPM, and waste energy — poor fit for wheels.
+A servo is a position device,work bad at contionius rotation
+------------------------
+An arm joint that must hold position under load, without drifting, for several minutes
+sOL:
+Stepper motor-same reason for KMS +servo motor
+
+feacture of stepper must hold position under load, without drifting, for several minutes.also available with microstepping,improve smoothness when joint move
+remove bldc and dc motor cause can do but need a encoder,which is inbuilt for stepper
+
+[from online serach-
+servo use potentionometer feedback which frift under load] so this too out
+
+---------------------------
+ A vertical lead-screw axis that must return to the same height repeatably, with no feedback sensor in the
+budget.
+Sol:
+stepper:servo(contionus rotation one) +stepper same reason use in KMS,3d printer
+bldc motor ,dc motar repeated motion or once even can't make it without encoder
+repeated same height ,step count can solve use stepper,count step and same height with that screw 
