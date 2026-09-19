@@ -1,26 +1,26 @@
 Desired position
-      ↓
+ V
 Position Controller
-      ↓
+ V
 Desired velocity
-      ↓
+ V
 Velocity Controller
-      ↓
+ V
 Desired attitude
-      ↓
+ V
 Attitude Controller
-      ↓
+ V
 Desired angular rate
-      ↓
+ V
 Rate Controller
-      ↓
+ V
 Desired thrust + roll/pitch/yaw torque
-      ↓
+ V
 Mixer
-      ↓
+ V
 Motor 1, 2, 3, 4
-      ↓
+ V
 Quadcopter model
-      ↓
+ V
 Sensors / feedback
-      └──────────────────→ controllers
+ ---------------------------------->controllers

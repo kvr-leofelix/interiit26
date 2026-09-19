@@ -1,5 +1,4 @@
-function [motor_thrusts, motor_raw] = mixer( ...
-    T, tau_roll, tau_pitch, tau_yaw, L, kYaw, Tmax)
+function [motor_thrusts, motor_raw] = mixer(T, tau_roll, tau_pitch, tau_yaw, L, kYaw, Tmax)
 % MIXER
 % Convert desired total thrust and body torques into rotor thrusts.
 %

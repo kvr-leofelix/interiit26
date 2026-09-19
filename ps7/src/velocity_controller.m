@@ -10,10 +10,8 @@ function desiredPitch = velocity_controller( ...
 
 velocityError = desiredVelocity - actualVelocity;
 
-desiredAcceleration = ...
-    Kp_vel * velocityError;
+desiredAcceleration =Kp_vel * velocityError;
 
-desiredPitch = ...
-    desiredAcceleration / g;
+desiredPitch =desiredAcceleration / g;
 
 end
