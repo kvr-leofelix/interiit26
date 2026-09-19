@@ -1,0 +1,38 @@
+BRUSH DC MOTOR:
+Motor type: Brushed DC Motor
+Input signal: PWM signal + direction signal
+Command units: PWM duty cycle (%) and PWM frequency (Hz)
+Driver required: H-bridge motor driver
+Feedback available:No pre added encoder but an encoder can be added for speed or position feedback
+Holding behaviour: Does not hold position when unpowered. When powered, it can actively hold position only with suitable feedback and closed-loop control.
+Typical failure mode: Overheating or excessive current during stall/overload; brush and commutator wear; driver failure due to excessive current
+Obvious application: Rover drive wheels,applications requiring continuous rotation and straight speed control
+--------------------
+SERVO MOTOR:
+Motor type: Dc motor+gearbox+encoder+driver
+Input signal: PWM
+Command units: Pulse width in microseconds uS in degree postion
+Driver required: Motor driver and position controller are normally built into the servo; the microcontroller provides the control signal
+Feedback available: Yes
+Holding behaviour: Actively holds the commanded angular position while powered, provided the required holding torque is within the servo's limits
+Typical failure mode: Gear damage, overheating under prolonged stall/high load, excessive current, or failure to reach/hold position when overloaded
+Obvious application: Robot arm joints, steering mechanisms, grippers, and other controlled angular-position applications
+--------------------
+STEPPER MOTOR:
+Motor type: Stepper Motor
+Input signal: STEP pulses + DIR (direction) signal
+Command units:steps and them microsteps by driver
+Driver required: driver of stepper motor
+Feedback available: open and closed loop available
+Holding behaviour: Provides significant holding torque while the windings are energized.Unpowered also have some resistance to rotation
+Typical failure mode: Losing steps when load torque or acceleration exceeds available torque. In open-loop operation, the controller usually cannot detect the lost steps
+Obvious application: CNC machines, 3D printers, and applications requiring repeatable incremental motion
+------------------------------
+BLDC:
+Input signal: The MCU sends a command to an ESC-->ESC Ssnd dutycycle PWM to motor
+Command units: PWM duty cycle (%), pulse width (µs)
+Driver required: Electronic Speed Controller (ESC) or three-phase inverter/motor controller,FOC 
+Feedback available: HALL EFECT Sensor,for high rpm back emf,encoder
+Holding behaviour:position dosen't hold 
+Typical failure mode: Overheating, overcurrent, loss of proper commutation, ESC/MOSFET failure, or inability to produce the required torque under excessive load
+Obvious application: High-efficiency/high-power drivetrains, drones, electric vehicles, high-speed actuators, and applications requiring high power density
