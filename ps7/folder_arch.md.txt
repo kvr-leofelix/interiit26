@@ -1,0 +1,22 @@
+PS-07-Quadcopter-Control/
+│
+├── README.md
+├── src/
+│   ├── parameters.m
+│   ├── mixer.m
+│   ├── quad_dynamics.m
+│   ├── rate_controller.m
+│   ├── attitude_controller.m
+│   ├── velocity_controller.m
+│   └── position_controller.m
+│
+├── simulations/
+│   ├── task_A_mixer.m
+│   ├── task_B_rate.m
+│   ├── task_C_nested_loops.m
+│   ├── task_D_break_separation.m
+│   ├── task_E_realistic.m
+│   └── task_F_trajectory.m
+│
+└── results/
+    └── plots/
